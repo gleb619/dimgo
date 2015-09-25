@@ -1,0 +1,11 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-royal">
+    <h1 class="title">Map</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeMap()">Close</button>
+    </div>
+  </ion-header-bar>
+	<ion-content data-tap-disabled="true">
+		<ui-gmap-google-map center="d.map.center" zoom="d.map.zoom"></ui-gmap-google-map>
+	</ion-content>
+</ion-modal-view>

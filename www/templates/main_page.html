@@ -1,0 +1,36 @@
+<ion-view view-title="Main Page">
+  <!-- <ion-content on-infinite="mockup_load_more()" distance="10%"> -->
+  <ion-content class="padding">
+  	<h1>filtered:</h1><span ng-bind="d.filtered.length"></span>
+  	<ion-list>
+    	<ion-item class="item-full" ng-repeat="item in d.filtered" href="#/app/main/{{ ::item.id }}">
+			<div class="list card">
+				<div class="item item-avatar">
+					<img ng-src="{{ ::d.store.url }}/{{ ::item.sellerimage }}">
+					<h2 ng-bind="::item.name"></h2>
+					<p>
+						<b ng-bind="::item.price"></b>
+						<small ng-bind="::item.lastprice" class="last-price"></small>
+					</p>
+				</div>
+				
+				<div class="item item-image">
+					<img ng-src="{{ ::d.store.url }}/{{ ::item.image }}">
+				</div>
+			
+				<a class="item item-icon-left assertive" href="#/app/main/{{::item.id}}"> 
+					<i class="icon ion-pricetag"></i> 
+					<span>Details</span>
+				</a>
+			</div>
+		</ion-item>
+	</ion-list>
+	
+	<ion-infinite-scroll on-infinite="mockup_load_more()" distance="1%">
+	</ion-infinite-scroll>
+	<!-- 
+	<ion-infinite-scroll>
+	</ion-infinite-scroll>
+	 -->
+  </ion-content>
+</ion-view>

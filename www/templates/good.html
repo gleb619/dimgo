@@ -1,0 +1,48 @@
+<ion-view view-title="{{ ::d.item.name }}">
+	<ion-nav-buttons side="right">
+	    <button class="button button-clear" ng-click="order()">Buy</button>
+	</ion-nav-buttons>
+	<ion-content class="padding">
+		<ion-refresher pulling-text="Тянем-потянем" on-refresh="refresh()">
+		</ion-refresher>
+		<ion-slide-box>
+		  <ion-slide ng-repeat="image in ::d.item.images">
+		    <div class="box">
+		    	<!-- <h1 ng-bind="::image.caption"></h1> -->
+		    	<img ng-src="{{ ::d.store.url }}/{{ ::image.image }}">
+		    </div>
+		  </ion-slide>
+		  
+		  
+		</ion-slide-box>
+	    <h1 class="center">Details</h1>
+	   	<div class="list card">
+		    <label class="item item-input">
+		        <span class="input-label">Name</span>
+		        <span ng-bind="::d.item.name"></span>
+		    </label>
+		    <label class="item item-input">
+		        <span class="input-label">Price</span>
+		        <span ng-bind="::d.item.price"></span>
+		    </label>
+		    <label class="item item-input">
+		        <span class="input-label">Last price</span>
+		        <span ng-bind="::d.item.lastprice" class="last-price"></span>
+		    </label>
+		    <label class="item item-input">
+		        <span class="input-label">Address</span>
+		        <button class="button button-clear button-positive" ng-click="openMap()">
+		        	<span ng-bind="::d.item.address"></span>
+		        </button>
+		    </label>
+		    <label class="item item-input">
+		        <span class="input-label">Availability</span>
+		        <i class="md icon" ng-class="::{ 'ion-checkmark-round green': d.item.availability, 'ion-close-round red': !d.item.availability }"></i>
+		    </label>
+		    <label class="item item-input">
+		        <span class="input-label">Color</span>
+		        <span class="color-box" ng-style="::{ 'background-color':d.item.color }"></span>
+		    </label>
+		</div>
+	</ion-content>
+</ion-view>

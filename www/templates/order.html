@@ -1,0 +1,51 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-balanced">
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeOrder()">Close</button>
+    </div>
+    <h1 class="title">Order</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="doOrder()">Confirm</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="pading">
+  	
+ 	<div class="card">
+		<div class="item">
+			<h2 ng-bind="::d.item.name" class="center"></h2>
+		</div>
+		
+		<div class="item item-image">
+			<img ng-src="{{ ::d.store.url }}/{{ ::d.item.image }}">
+		</div>
+		
+		<a class="item item-icon-left assertive"> 
+			<i class="icon ion-ios-cart"></i>
+			<b ng-bind="::d.item.price"></b> 
+		</a>
+	</div>
+	
+	<form ng-submit="doOrder()">
+		<div class="list card">
+			<label class="item item-input">
+				<span class="input-label">First Name</span>
+				<input type="text" ng-model="contact.firstname">
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Last Name</span>
+				<input type="text" ng-model="contact.lastname">
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Phone</span>
+				<input type="text" ng-model="contact.phone">
+			</label>
+			<label class="item item-input">
+				<span class="input-label">Email</span>
+				<input type="text" ng-model="contact.email">
+			</label>
+			<ion-checkbox ng-model="contact.agree">I Agree with <span class="text-blue">Condition</span></ion-checkbox>
+		</div>
+	</form>
+
+	</ion-content>
+</ion-modal-view>
