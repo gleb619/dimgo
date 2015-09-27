@@ -4,6 +4,8 @@ $green: #4DE779 !default;
 $icon-font-size-md: 1.8em !default;
 
 
+
+
 .last-price {
 	text-decoration: line-through;
 }
@@ -83,3 +85,20 @@ $icon-font-size-md: 1.8em !default;
 	height: 1.8em;
 	width: 1.8em;
 }
+
+.list.card .button-holder {
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+/* 
+.platform-ios {
+	
+}
+
+.platform-android {
+	
+}
+ */

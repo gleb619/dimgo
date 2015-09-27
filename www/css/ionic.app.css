@@ -7969,3 +7969,19 @@ button.toast-close-button {
 .color-box {
   height: 1.8em;
   width: 1.8em; }
+
+.list.card .button-holder {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px; }
+
+/* 
+.platform-ios {
+	
+}
+
+.platform-android {
+	
+}
+ */

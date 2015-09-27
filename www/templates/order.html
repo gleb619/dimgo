@@ -1,12 +1,16 @@
 <ion-modal-view>
   <ion-header-bar class="bar-balanced">
+    <h1 class="title">Order</h1>
+    
     <div class="buttons">
       <button class="button button-clear" ng-click="closeOrder()">Close</button>
     </div>
-    <h1 class="title">Order</h1>
+    
+    <!-- 
     <div class="buttons">
       <button class="button button-clear" ng-click="doOrder()">Confirm</button>
     </div>
+     -->
   </ion-header-bar>
   <ion-content class="pading">
   	
@@ -44,7 +48,14 @@
 				<input type="text" ng-model="contact.email">
 			</label>
 			<ion-checkbox ng-model="contact.agree">I Agree with <span class="text-blue">Condition</span></ion-checkbox>
+			<div class="button-holder">
+				<button type="submit" class="button button-balanced button-block">
+					<span>Confirm</span>
+				</button>
+			</div>
 		</div>
+		
+		
 	</form>
 
 	</ion-content>

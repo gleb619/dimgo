@@ -14,7 +14,6 @@
 		
 		$scope.render = function() {
 			$scope.d.filtered = null;
-			$scope.d.filtered = new Array();
 			
 			let timer = $timeout(function() {
 				$scope.d.filtered = angular.copy($scope.d.data);
@@ -31,7 +30,7 @@
 
 				$timeout.cancel(timer);
 				timer = null;
-			}, 100);
+			}, 1000);
 		};
 
 		$scope.mockup_load = function() {
